@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/rvolwerk/compliance-harnas-configurator/schemas/harnas-config.schema.json",
+  "$id": "https://github.com/volwerk/compliance-harnas-configurator/schemas/harnas-config.schema.json",
   "title": "Compliance-Harnas configuration",
   "description": "Canonical format for a single AI use-case configuration in the Compliance-Harnas Configurator.",
   "type": "object",

@@ -11,12 +11,17 @@ Je voert een check uit tegen het actieve harnas dat de gebruiker via de Complian
 
 ### 1. Lees het actieve harnas
 
-Lees: `C:\Users\rvolw\OneDrive - AuCx\Documenten\Harnas\configs\ACTIVE.json`
+Zoek `ACTIVE.json` in deze volgorde (eerste die bestaat, wint):
 
-Als het bestand **niet bestaat**: stop en geef terug:
+1. Pad in environment variable `HARNAS_CONFIG` (als gezet)
+2. `./configs/ACTIVE.json` (relatief aan current working directory)
+3. `~/.claude/harnas/ACTIVE.json` (standaard user-config-locatie)
 
-> Geen actief harnas gevonden in `configs\ACTIVE.json`.
-> Open de Compliance-Harnas Configurator (`Compliance-Harnas-Configurator.html`), ga naar de **Stuur AI**-tab en klik **"Sla op als ACTIVE.json"**.
+Als geen van deze bestaat: stop en geef terug:
+
+> Geen actief harnas gevonden. Open de Compliance-Harnas Configurator
+> (`Compliance-Harnas-Configurator.html`), ga naar de **Stuur AI**-tab en
+> klik **"Sla op als ACTIVE.json"** — sla op in één van de drie locaties hierboven.
 
 ### 2. Parse en interpreteer
 
