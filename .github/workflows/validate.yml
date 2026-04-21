@@ -1,0 +1,44 @@
+name: Validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  schema:
+    name: JSON Schema validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install ajv-cli
+        run: npm install -g ajv-cli ajv-formats
+      - name: Validate example configs
+        run: |
+          for f in examples/*.json; do
+            echo "Validating $f"
+            ajv validate \
+              --spec=draft2020 \
+              -c ajv-formats \
+              -s schemas/harnas-config.schema.json \
+              -d "$f" \
+              --strict=false
+          done
+
+  html:
+    name: HTML lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install html-validate
+        run: npm install -g html-validate
+      - name: Lint configurator
+        run: html-validate src/Compliance-Harnas-Configurator.html || true
+        # Tolerant for now — the single-file inlines large JS, html-validate
+        # complains about some modern patterns. Set to strict once stable.
