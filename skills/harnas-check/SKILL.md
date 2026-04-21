@@ -20,7 +20,7 @@ Zoek `ACTIVE.json` in deze volgorde (eerste die bestaat, wint):
 Als geen van deze bestaat: stop en geef terug:
 
 > Geen actief harnas gevonden. Open de Compliance-Harnas Configurator
-> (`Compliance-Harnas-Configurator.html`), ga naar de **Stuur AI**-tab en
+> (`Compliance-Harnas-Configurator.html`), ga naar de **Toon Harnas**-tab en
 > klik **"Sla op als ACTIVE.json"** — sla op in één van de drie locaties hierboven.
 
 ### 2. Parse en interpreteer

@@ -549,7 +549,7 @@
             <button class="tab" data-tab="controls">Controls</button>
             <button class="tab" data-tab="risks">Risico's &amp; triggers</button>
             <button class="tab" data-tab="stride">STRIDE</button>
-            <button class="tab" data-tab="steer">Stuur AI</button>
+            <button class="tab" data-tab="steer">Toon Harnas</button>
             <button class="tab" data-tab="history">Historie</button>
             <button class="tab" data-tab="export">Export</button>
           </nav>
@@ -1811,7 +1811,7 @@ function renderSteer(cfg, h){
   const fsaSupported = "showSaveFilePicker" in window;
 
   document.getElementById("tab-steer").innerHTML = `
-    <div class="disclaimer"><b>Stuur AI — operationaliseer het harnas</b>
+    <div class="disclaimer"><b>Toon Harnas — operationaliseer de controls</b>
       Vertaalt het harnas naar concrete artefacten die Claude Code kunnen aansturen: een CLAUDE.md-fragment (soft), een settings.json hook-blok (medium), en een geldig harnas-bestand voor de <code>/harnas-check</code> skill.
     </div>
 

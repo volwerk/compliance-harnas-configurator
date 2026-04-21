@@ -42,8 +42,8 @@ Compliance frameworks overlap and compete. Teams drown in checklists that don't 
 
 1. Open `src/Compliance-Harnas-Configurator.html` in a modern browser (Chrome/Edge recommended for File System Access API).
 2. Click **+ Nieuwe** to start the wizard, or **Import** to load one of the files in `examples/`.
-3. After the wizard, explore the tabs: *Overzicht · Controls · Risico's · STRIDE · Stuur AI · Historie · Export*.
-4. When ready, use **Stuur AI → Save as ACTIVE.json** to make the config available to the `/harnas-check` skill.
+3. After the wizard, explore the tabs: *Overzicht · Controls · Risico's · STRIDE · Toon Harnas · Historie · Export*.
+4. When ready, use **Toon Harnas → Save as ACTIVE.json** to make the config available to the `/harnas-check` skill.
 
 ## Fits SAAF's four building blocks
 
@@ -51,8 +51,8 @@ This tool is a drop-in contribution to the [SAAF Project](https://saafproject.co
 
 | SAAF building block | What this configurator provides |
 |---|---|
-| 🔵 **Prompts / System Instructions** | `Stuur AI` tab generates a `CLAUDE.md` fragment from 9 soft-tier controls, with your use-case details substituted in. |
-| 🟠 **Automation / Integrations** | `Stuur AI` tab generates a `settings.json` hook block with template commands for 9 medium-tier controls (HITL, DLP, audit-log, prompt-injection scan, retention). |
+| 🔵 **Prompts / System Instructions** | `Toon Harnas` tab generates a `CLAUDE.md` fragment from 9 soft-tier controls, with your use-case details substituted in. |
+| 🟠 **Automation / Integrations** | `Toon Harnas` tab generates a `settings.json` hook block with template commands for 9 medium-tier controls (HITL, DLP, audit-log, prompt-injection scan, retention). |
 | 🟢 **Control mappings / Frameworks** | The core: 38 controls × 4+ frameworks × CBW/NIS2 26 BMs × DigiD (partial mapping — 8 AI-relevant norms from NOREA 3.0's 21-norm kader) × STRIDE × AI Act triggers. |
 | 🟣 **Report formats / Outputs** | Export as canonical JSON (SHA-256 signed), GitHub-flavored Markdown checklist, dedicated STRIDE threat report, A4 print view. |
 
