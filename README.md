@@ -11,7 +11,9 @@ Both audiences produce and consume the same JSON schema, so a builder's configur
 
 No backend. No dependencies. Works offline.
 
-![screenshot placeholder — configurator dashboard](docs/screenshot-dashboard.png)
+![Configurator wizard — step 1: use-case intake](docs/screenshot-wizard.png)
+
+*Wizard step 1 — the configurator walks you through 5 questions (use-case · application · data · model · infra) and activates the relevant subset of 38 harnas-controls.*
 
 ---
 
