@@ -11,7 +11,7 @@ Built by an auditor, for auditors. No backend. No dependencies. Works offline.
 ## What it does
 
 1. **Wizard** — walk through 5 questions about your AI use-case (application · data · model · infra).
-2. **Engine** — activates the relevant subset of 35 "harnas" controls across 7 compliance layers (H1 Governance → H7 Assurance).
+2. **Engine** — activates the relevant subset of 38 "harnas" controls across 7 compliance layers (H1 Governance → H7 Assurance).
 3. **Cross-references** — each control links to:
    - **EU AVG/GDPR** articles
    - **EU DORA** clauses
@@ -44,7 +44,7 @@ This tool is a drop-in contribution to the [SAAF Project](https://saafproject.co
 |---|---|
 | 🔵 **Prompts / System Instructions** | `Stuur AI` tab generates a `CLAUDE.md` fragment from 9 soft-tier controls, with your use-case details substituted in. |
 | 🟠 **Automation / Integrations** | `Stuur AI` tab generates a `settings.json` hook block with template commands for 9 medium-tier controls (HITL, DLP, audit-log, prompt-injection scan, retention). |
-| 🟢 **Control mappings / Frameworks** | The core: 35 controls × 4+ frameworks × CBW/NIS2 26 beheersmaatregelen × DigiD 21 normen × STRIDE × AI Act triggers. |
+| 🟢 **Control mappings / Frameworks** | The core: 38 controls × 4+ frameworks × CBW/NIS2 26 BMs × DigiD (partial mapping — 8 AI-relevant norms from NOREA 3.0's 21-norm kader) × STRIDE × AI Act triggers. |
 | 🟣 **Report formats / Outputs** | Export as canonical JSON (SHA-256 signed), GitHub-flavored Markdown checklist, dedicated STRIDE threat report, A4 print view. |
 
 Positioned as **infrastructure** for SAAF agents, not one agent among many. Any SAAF agent can ship a harnas-config alongside its code.

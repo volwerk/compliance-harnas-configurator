@@ -30,7 +30,7 @@ labels: control, needs-discussion
 - [ ] org (audit-dossier only)
 
 ## Why is it not already covered
-<!-- Show that none of the existing 35 controls capture this obligation. Reference specific existing control codes. -->
+<!-- Show that none of the existing 38 controls capture this obligation. Reference specific existing control codes. -->
 
 ## Proposed CLAUDE.md wording (if soft)
 

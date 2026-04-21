@@ -9,7 +9,7 @@ The Compliance-Harnas Configurator includes data, fonts, and concepts from third
 - **License:** Creative Commons Attribution 4.0 International (CC-BY 4.0)
 - **License text:** https://creativecommons.org/licenses/by/4.0/
 - **What is used:** The 26 official BM identifiers (1.1 – 17.1), titles, themes, and Cbw/Cbb article references. Embedded in `src/Compliance-Harnas-Configurator.html` under the constant `cbwMap`.
-- **What is NOT from this source:** the mapping of each BM onto the 35 harnas-controls — those are our own interpretation (best-effort; verify per audit).
+- **What is NOT from this source:** the mapping of each BM onto the 38 harnas-controls — those are our own interpretation (best-effort; verify per audit).
 
 ### DigiD NOREA 3.0 normenkader — partial mapping
 - **Source:** Norm based on NOREA DigiD Assessment Template 2025.
