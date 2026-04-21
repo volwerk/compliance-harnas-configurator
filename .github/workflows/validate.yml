@@ -42,3 +42,18 @@ jobs:
         run: html-validate src/Compliance-Harnas-Configurator.html || true
         # Tolerant for now — the single-file inlines large JS, html-validate
         # complains about some modern patterns. Set to strict once stable.
+
+  safety:
+    name: Safety-functions unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run safety tests
+        run: node test/safety.test.cjs
+        # Extracts PII_PATTERNS, INJECTION_PATTERNS, sanitizeSingleLine(),
+        # detectPII() and detectInjection() from the configurator HTML and
+        # runs assertions against representative payloads including common
+        # prompt-injection vectors. Fails the build on any regression.
