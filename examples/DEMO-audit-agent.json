@@ -1,0 +1,32 @@
+{
+  "id": "cfg_demo_audit_agent",
+  "name": "DEMO — Audit-assistent (generic)",
+  "owner": "Audit Lead",
+  "dpo": "DPO Office",
+  "ciso": "CISO Office",
+  "purpose": "Generic example of an AI audit-assistant configuration. Supports an auditor in evidence gathering, framework mapping, and report drafting. Works on internal audit-dossiers; generates draft conclusions for human review. No PII beyond standard audit-team identifiers.",
+  "aiActClass": "limited",
+  "created": "2026-04-21T12:00:00.000Z",
+  "modified": "2026-04-21T12:00:00.000Z",
+  "L04": { "app": "built", "prompts": "ptr", "agents": true },
+  "L03": { "scope": "s3", "pg": "pg_normal", "confidential": true },
+  "L02": { "model": "pub_closed", "finetune": "ft_no" },
+  "L01": { "infra": "cloud" },
+  "controlStatus": {
+    "G.01": { "status": "done", "owner": "Audit Lead", "date": "2026-02-01", "evidence": "https://example.org/ai-policy.pdf", "note": "AI policy ratified by management board." },
+    "G.03": { "status": "done", "owner": "Audit Lead", "date": "2026-02-01", "evidence": "", "note": "Owner / DPO / CISO formally assigned." },
+    "I.01": { "status": "done", "owner": "CISO Office", "date": "2026-01-15", "evidence": "", "note": "SSO + hardware MFA enforced on AI vendor account." },
+    "I.04": { "status": "done", "owner": "CISO Office", "date": "2026-01-15", "evidence": "", "note": "Rate-limit + spend cap configured at provider console." },
+    "T.01": { "status": "done", "owner": "Audit Lead", "date": "2026-02-01", "evidence": "", "note": "AI-generated output is clearly labeled in all exports." },
+    "T.03": { "status": "done", "owner": "Audit Lead", "date": "2026-02-01", "evidence": "", "note": "Output includes reasoning and source citations." },
+    "A.01": { "status": "open", "owner": "", "date": "", "evidence": "", "note": "Append-only prompt/response log not yet implemented." },
+    "A.02": { "status": "open", "owner": "", "date": "", "evidence": "", "note": "Prompt / skill changes not yet tracked in version control." },
+    "I.02": { "status": "prog", "owner": "CISO Office", "date": "2026-04-01", "evidence": "", "note": "Relying on model's built-in defense; no external input scan yet." },
+    "I.03": { "status": "open", "owner": "", "date": "", "evidence": "", "note": "No programmatic DLP on model output." },
+    "D.03": { "status": "open", "owner": "", "date": "", "evidence": "", "note": "PII-redaction is manual before prompt submission." },
+    "D.04": { "status": "risk", "owner": "DPO Office", "date": "2026-02-01", "evidence": "", "note": "Model provider hosts in US; accepted risk for non-special-category data." }
+  },
+  "history": [
+    { "at": "2026-04-21T12:00:00.000Z", "byRole": "maintainer", "kind": "create", "note": "Demo configuration created for SAAF contribution." }
+  ]
+}

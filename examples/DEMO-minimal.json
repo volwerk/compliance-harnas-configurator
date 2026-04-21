@@ -1,0 +1,19 @@
+{
+  "id": "cfg_demo_minimal",
+  "name": "DEMO — Minimal valid config",
+  "owner": "—",
+  "dpo": "",
+  "ciso": "",
+  "purpose": "Smallest valid configuration: generic app, no personal data, open-source model on-prem. Serves as a schema-validation reference and a starting point for least-risk AI use-cases.",
+  "aiActClass": "minimal",
+  "created": "2026-04-21T12:00:00.000Z",
+  "modified": "2026-04-21T12:00:00.000Z",
+  "L04": { "app": "gen", "prompts": "pgen", "agents": false },
+  "L03": { "scope": "s0", "pg": "pg_none", "confidential": false },
+  "L02": { "model": "priv_open", "finetune": "ft_no" },
+  "L01": { "infra": "onprem" },
+  "controlStatus": {},
+  "history": [
+    { "at": "2026-04-21T12:00:00.000Z", "byRole": "maintainer", "kind": "create", "note": "Minimal schema-valid reference configuration." }
+  ]
+}

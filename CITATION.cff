@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software in academic or professional work, please cite it as below."
+title: "Compliance-Harnas Configurator"
+abstract: >
+  A single-file HTML tool that maps an AI use-case to required compliance controls
+  across EU AVG/GDPR, DORA, NL CBW/NIS2, the EU AI Act, and STRIDE, and translates
+  the result into runtime artefacts for AI coding harnesses.
+authors:
+  - family-names: "Volwerk"
+    given-names: "René"
+    affiliation: "AuCx"
+    country: "NL"
+license: MIT
+version: "0.1.0"
+date-released: "2026-04-21"
+url: "https://github.com/rvolwerk/compliance-harnas-configurator"
+keywords:
+  - compliance
+  - audit
+  - AI governance
+  - AI Act
+  - GDPR
+  - DORA
+  - NIS2
+  - CBW
+  - STRIDE
+  - threat model
+  - SAAF

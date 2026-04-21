@@ -1,0 +1,42 @@
+# Live / working configs — MAY contain client or personal data
+configs/
+!configs/.gitkeep
+ACTIVE.json
+CLAUDE-self.json
+*-private.json
+*-klant*.json
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+*.swp
+*.swo
+~$*
+
+# Editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Node (for future tooling)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Python (for future validator scripts)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+
+# Local env
+.env
+.env.local

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rvolwerk/compliance-harnas-configurator/schemas/harnas-config.schema.json",
+  "title": "Compliance-Harnas configuration",
+  "description": "Canonical format for a single AI use-case configuration in the Compliance-Harnas Configurator.",
+  "type": "object",
+  "required": ["id", "name", "owner", "purpose", "aiActClass", "L01", "L02", "L03", "L04", "controlStatus"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[\\w_-]{3,80}$",
+      "description": "Stable identifier, kebab/snake case; 3-80 chars."
+    },
+    "name": { "type": "string", "maxLength": 200 },
+    "owner": { "type": "string", "maxLength": 200 },
+    "dpo": { "type": "string", "maxLength": 200 },
+    "ciso": { "type": "string", "maxLength": 200 },
+    "purpose": { "type": "string", "maxLength": 2000 },
+    "aiActClass": {
+      "type": "string",
+      "enum": ["minimal", "limited", "high-risk", "unacceptable"]
+    },
+    "created": { "type": "string", "format": "date-time" },
+    "modified": { "type": "string", "format": "date-time" },
+    "L04": {
+      "type": "object",
+      "required": ["app", "prompts"],
+      "properties": {
+        "app": { "type": "string", "enum": ["gen", "cfg", "built"] },
+        "prompts": { "type": "string", "enum": ["pgen", "ptr"] },
+        "agents": { "type": "boolean" }
+      }
+    },
+    "L03": {
+      "type": "object",
+      "required": ["scope", "pg"],
+      "properties": {
+        "scope": { "type": "string", "enum": ["s0", "s1", "s2", "s3", "s4"] },
+        "pg": { "type": "string", "enum": ["pg_none", "pg_normal", "pg_special"] },
+        "confidential": { "type": "boolean" }
+      }
+    },
+    "L02": {
+      "type": "object",
+      "required": ["model"],
+      "properties": {
+        "model": { "type": "string", "enum": ["pub_closed", "pub_open", "priv_closed", "priv_open"] },
+        "finetune": { "type": "string", "enum": ["ft_no", "ft_yes"] }
+      }
+    },
+    "L01": {
+      "type": "object",
+      "required": ["infra"],
+      "properties": {
+        "infra": { "type": "string", "enum": ["onprem", "cloud", "hybrid", "edge"] }
+      }
+    },
+    "controlStatus": {
+      "type": "object",
+      "description": "Map of harnas-control code (e.g. G.01, D.04, A.01) to status entry.",
+      "patternProperties": {
+        "^[A-Z]\\.[0-9]{2}$": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["open", "prog", "done", "na", "risk"] },
+            "owner": { "type": "string", "maxLength": 200 },
+            "date": { "type": "string" },
+            "evidence": {
+              "type": "string",
+              "description": "URL to evidence. Must use http(s), file, or mailto scheme.",
+              "pattern": "^$|^(https?:|file:|mailto:)"
+            },
+            "note": { "type": "string", "maxLength": 2000 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["at", "byRole"],
+        "properties": {
+          "at": { "type": "string", "format": "date-time" },
+          "byRole": { "type": "string" },
+          "kind": { "type": "string", "enum": ["create", "status", "field", "choice"] },
+          "code": { "type": "string" },
+          "field": { "type": "string" },
+          "from": {},
+          "to": {},
+          "note": { "type": "string" },
+          "layer": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "_integrity": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hex digest over canonicalised JSON (keys alphabetically sorted, _integrity field excluded)."
+    }
+  }
+}
