@@ -2,7 +2,14 @@
 
 > **A single-file HTML tool that maps one AI use-case to its required compliance controls** — covering EU AVG (GDPR), DORA, NL CBW/NIS2, the EU AI Act, and the STRIDE threat model — and translates the result into runtime artefacts for Claude Code (CLAUDE.md fragment, settings.json hooks, skill pre-flight check).
 
-Built by an auditor, for auditors. No backend. No dependencies. Works offline.
+Two audiences, same data, opposite directions:
+
+- **AI builders** — engineers, product managers, DPOs, CISOs choosing an AI setup. Use the forward-pass: *given these design choices, what must we implement?* Generates `CLAUDE.md` rules and `settings.json` hooks that go straight into the codebase.
+- **Auditors** — internal, external, compliance officers reviewing an existing system. Use the reverse-pass: *given this system was deployed, what should it demonstrate?* Same 38 controls become an evidence-linked checklist; exports a NOREA-style markdown dossier.
+
+Both audiences produce and consume the same JSON schema, so a builder's configuration becomes auditable in place, and audit findings can be handed back as annotations on the same object.
+
+No backend. No dependencies. Works offline.
 
 ![screenshot placeholder — configurator dashboard](docs/screenshot-dashboard.png)
 
